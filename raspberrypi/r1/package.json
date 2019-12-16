@@ -1,0 +1,14 @@
+{
+  "name": "r1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "andybao",
+  "license": "ISC",
+  "dependencies": {
+    "onoff": "^5.0.0"
+  }
+}
