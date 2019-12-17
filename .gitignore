@@ -1,5 +1,6 @@
 .DS_Store
 node_modules/
+py3env/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
