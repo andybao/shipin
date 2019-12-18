@@ -1,12 +1,8 @@
-import functools
-
-from flask import (
-    Blueprint, flash, g, redirect, render_template, request, session, url_for
-)
+from flask import Blueprint, render_template, request
 
 bp = Blueprint('index', __name__)
 
-@bp.route('/', methods=('GET', 'POST'))
+@bp.route('/', methods=('POST'))
 def index():
     if request.method == 'POST':
         if request.form.get('submit_button') == 'ON':
