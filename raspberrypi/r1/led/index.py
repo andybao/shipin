@@ -11,11 +11,10 @@ bp = Blueprint('index', __name__)
 @bp.route('/', methods=('GET', 'POST'))
 def index():
 
-    led_pin = 11
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(led_pin, GPIO.OUT)
-
     if request.method == 'POST':
+        led_pin = 11
+        GPIO.setmode(GPIO.BOARD)
+        GPIO.setup(led_pin, GPIO.OUT)
         if request.form.get('submit_button') == 'ON':
             GPIO.output(led_pin, GPIO.HIGH)
             print ('ON')
