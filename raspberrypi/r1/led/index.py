@@ -13,6 +13,8 @@ def index():
             print ('ON')
         elif request.form.get('submit_button') == 'OFF':
             print ('OFF')
+        elif request.form.get('submit_button') == 'CLEANUP':
+            print ('CLEANUP')
         else:
             pass
     return render_template('index.html')
