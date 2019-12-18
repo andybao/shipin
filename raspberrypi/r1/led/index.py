@@ -6,12 +6,15 @@ from flask import (
 )
 
 bp = Blueprint('index', __name__)
-led_pin = 11
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(led_pin, GPIO.OUT)
+
 
 @bp.route('/', methods=('GET', 'POST'))
 def index():
+
+    led_pin = 11
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(led_pin, GPIO.OUT)
+
     if request.method == 'POST':
         if request.form.get('submit_button') == 'ON':
             GPIO.output(led_pin, GPIO.HIGH)
