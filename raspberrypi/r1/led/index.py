@@ -6,7 +6,7 @@ from flask import (
 
 bp = Blueprint('index', __name__)
 
-@bp.route('/', methods=('POST'))
+@bp.route('/', methods=('GET', 'POST'))
 def index():
     if request.method == 'POST':
         if request.form.get('submit_button') == 'ON':
